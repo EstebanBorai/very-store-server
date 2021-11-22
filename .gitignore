@@ -1,2 +1,6 @@
+# Files
 __pycache__
 db.sqlite3
+
+# Directories
+media/*
