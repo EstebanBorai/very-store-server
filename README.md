@@ -14,7 +14,7 @@ python -m pip install --user black
 Then run Black against the codebase by running:
 
 ```bash
-python -m black ./* 
+python -m black ./*.py
 ```
 
 You may see an output similar to this:
