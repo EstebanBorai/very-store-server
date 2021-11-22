@@ -2,7 +2,17 @@
   <h1 align="center">very-store</h1>
 </div>
 
-## Code format
+## Development
+
+### Database Migrations
+
+Run SQL database migrations by running:
+
+```bash
+python manage.py migrate
+```
+
+### Code style
 
 Black is used to for fixing codebase format, install Black using
 pip as follows:
