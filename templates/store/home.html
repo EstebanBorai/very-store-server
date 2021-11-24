@@ -1,11 +1,30 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title></title>
-</head>
-<body>
+{% extends "./layout.html" %}
+{% load static %}
+{% block title %}Home{% endblock %}
 
-</body>
-</html>
+{% block content %}
+<div class="pusher">
+  <div class="ui inverted vertical masthead center aligned segment">
+    <div class="ui text container">
+      <h1 class="ui inverted header">
+        Imagine-a-Company
+      </h1>
+      <h2>Do whatever you want when you want to.</h2>
+      <div class="ui huge primary button">Get Started <i class="right arrow icon"></i></div>
+    </div>
+  </div>
+  {% for product in products %}
+  <div class="ui card">
+    <div class="image">
+      <img src="{{ product.image.url }}">
+    </div>
+    <div class="content">
+      <a class="header">{{ product.title | title }}</a>
+      <div class="description">
+        {{ product.author  }}
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}
