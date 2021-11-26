@@ -1,18 +1,10 @@
-{% extends "./layout.html" %}
+{% extends "../layout.html" %}
 {% load static %}
 {% block title %}Home{% endblock %}
 
 {% block content %}
 <div class="pusher row">
-  <div class="ui inverted vertical masthead center aligned segment">
-    <div class="ui text container">
-      <h1 class="ui inverted header">
-        Imagine-a-Company
-      </h1>
-      <h2>Do whatever you want when you want to.</h2>
-      <div class="ui huge primary button">Get Started <i class="right arrow icon"></i></div>
-    </div>
-  </div>
+  <h2>{{ category.name | title }}</h2>
   {% for product in products %}
   <div class="ui card">
     <div class="image">

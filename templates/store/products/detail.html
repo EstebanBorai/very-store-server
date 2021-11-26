@@ -1,0 +1,16 @@
+{% extends "../layout.html" %}
+{% load static %}
+{% block title %}Book "{{ product.title }}" by {{ product.author }}{% endblock %}
+
+{% block content %}
+<div class="container">
+  <main class="pt-5">
+    <img src="{{ product.image.url }}" width="320" />
+    <article>
+      <h2>{{ product.title }}</h2>
+      <strong>{{ product.author }}</strong>
+      <p>{{ product.description | slice:":256" }}</p>
+    </article>
+  </main>
+</div>
+{% endblock %}

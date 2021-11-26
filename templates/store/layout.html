@@ -20,7 +20,7 @@
       <div class="menu">
         {% for c in categories %}
         <p>
-          <a class="item" href="">{{ c.name | title }}</a>
+          <a class="item" href="{{ c.get_absolute_url }}">{{ c.name | title }}</a>
         </p>
         {% endfor %}
       </div>
@@ -38,7 +38,9 @@
   </header>
   <!-- Header: End -->
   <!-- Main: Start -->
-  <main style="min-height: calc(100vh - 50px);">
+  <main class="ui vertical stripe segment" style="min-height: calc(100vh - 50px);">
+    <div class="ui middle aligned stackable grid container">
+    </div>
     {% block content %} {% endblock %}
   </main>
   <!-- Main: End -->
@@ -90,4 +92,4 @@
   </script>
   <!-- Scripts: End -->
 </body>
-</html
+</html>
