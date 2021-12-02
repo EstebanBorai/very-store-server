@@ -5,7 +5,10 @@ name = "pypi"
 
 [packages]
 django = "3.2.9"
+django-cors-headers = "3.10.0"
+graphene-django = "2.15.0"
 pillow = "8.4.0"
+black = "*"
 
 [dev-packages]
 black = "21.11b1"
